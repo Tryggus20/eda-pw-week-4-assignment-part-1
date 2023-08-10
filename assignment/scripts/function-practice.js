@@ -15,33 +15,35 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(David) {
+  console.log('in helloName');
   return 'Hello, Your Name!' ;
 } // end helloName
 // Remember to call the function to test
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
+  console.log('in addNumbers');
 
   // return firstNumber + secondNumber;
   return firstNumber + secondNumber;
-  console.log('The sum of the numbers is', addNumbers);
 } // end addNumbers
-
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( firstNumber, secondNumber, thirdNumber) {
+  console.log('in multiplyThree');
 return firstNumber * secondNumber * thirdNumber;
-console.log('The numbers multiplied equals', multiplyThree);
 }
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
+  console.log('in isPositive');
   if (number > 0) {
     return true;
   }
   return false;
+  console.log(isPositive)
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
@@ -53,16 +55,29 @@ console.log('isPositive - should say false', isPositive(-3));
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
-
-}
-
+  console.log('in getLast');
+  if (array.length === 0){
+    return undefined;
+  } //end of if
+  else{
+    return array[array.length -1];
+  } //end of else
+  }// end of getlast
+  
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-
-}
-
+  console.log('in find');
+  for (let i = 0; i < array.length; i++ ){
+    if( array[i] === value) {
+      return true;
+    } //end of if
+  } //end of for
+  return false;
+} //end of find function
+let numberArray = [1, 2, 3, 4, 5];
+console.log(find(2, numberArray));
 // ----------------------
 // Stretch Goals
 // ----------------------
