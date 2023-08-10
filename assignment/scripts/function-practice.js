@@ -109,18 +109,25 @@ function sumAll(array) {
   }//end of for
 
   // TODO: return the sum
-  
+
   console.log('test3', sum);
 return sum;
 }// end of sumAll
 
 
+
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
-
-}
+function allPositive(array) {
+  console.log('In allPositive');
+  const positive = array.filter(function(number){
+    return number > 0;
+  }// end number function
+  )
+  console.log('In allPositive again', positive);
+  return positive; 
+}// end of allPositive
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
