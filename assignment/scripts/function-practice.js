@@ -32,7 +32,7 @@ function addNumbers(firstNumber, secondNumber) {
 function multiplyThree( firstNumber, secondNumber, thirdNumber) {
   console.log('in multiplyThree');
 return firstNumber * secondNumber * thirdNumber;
-}
+}//end of multiplyThree
 
 
 // 5. Function that will return true if a number is positive, 
@@ -43,8 +43,8 @@ function isPositive(number) {
     return true;
   }
   return false;
-  console.log(isPositive)
-}
+}// end of isPositive
+
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log('isPositive - should say true', isPositive(3));
@@ -76,8 +76,10 @@ function find(value, array) {
   } //end of for
   return false;
 } //end of find function
+
 let numberArray = [1, 2, 3, 4, 5];
 console.log(find(2, numberArray));
+
 // ----------------------
 // Stretch Goals
 // ----------------------
