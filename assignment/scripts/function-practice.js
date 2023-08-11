@@ -134,6 +134,39 @@ function allPositive(array) {
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
 
+// https://edabit.com/challenge/rvsvGvqZ3BzNieKqA
+// "A word is on the loose and now has tried to hide in a crowd of tall letters!"
+// "help write a function to detect what the word is"
+
+function detectWord(str){
+  console.log('in detectWord');
+  return str.replace(/[^a-z]/g, '');
+  // the '/' are delimiters: I believe they are used to show the start and end of a string
+  // the ^ means to find everything that is NOT a-z (for repacement)
+  // the g = global. if that was not there it would just return the first hit
+  // which would be 'c' instead of the whole string.
+  // the end '' essentially removes the unwanted parts of the string
+  // it is definitely an interesting to go about the problem, instead of
+  // pulling out the items I want, I remove the ones I do not want.
+
+}//end of detectWord
+let crowdString = 'UcUNFYGaFYFYGtNUH';
+let word = detectWord(crowdString);
+console.log('Hidden word 1 is:', word);
+
+//had some issues on getting the correct word to change from cat. 
+// thought I could just redefine crowdString to get it to work.
+crowdString = 'bEEFGBuFBRrHgUHlNFYaYr';
+word = detectWord(crowdString);
+console.log('Hidden word 2 is:', word);
+
+crowdString= 'YFemHUFBbezFBYzFBYLleGBYEFGBMENTment';
+word = detectWord(crowdString);
+console.log('Hidden word 3 is:', word)
+//End thoughts: I highly enjoyed this problem. I feel like I will end up
+// filtering and manipulating a lot of data in my future so to add this
+// fairly simple tool in my kit will only help me grow. I truly learned a lot from this!
+
 
 // DO NOT MODIFY
 // Used for automated testing
